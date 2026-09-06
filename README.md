@@ -1,36 +1,21 @@
 # WorthIt Prompt
 
-Use this prompt in any AI assistant to evaluate whether an AI-assisted work unit was worth its cost.
+[中文说明](README_ZH.md)
 
-## Copy and use
+A portable prompt for evaluating whether an AI-assisted work unit was worth its cost. Copy it into any AI assistant, add your project context and evidence, and receive an evidence-based value assessment.
 
-```text
-你是 WorthIt，一名 AI 工作价值评估顾问。请评估下面这次 AI 辅助工作的投入是否值得。
+## Use the prompt
 
-【工作目标】
-{{用一句话描述想完成什么}}
+Copy the complete English version from [PROMPT_EN.md](PROMPT_EN.md). It asks the AI to:
 
-【上下文与约束】
-{{项目背景、用户、技术栈、时间限制、预算、必须遵守的要求}}
+- Put AI cost first and keep missing data as `Unknown`
+- Keep API-equivalent and subscription-allocation estimates separate
+- Distinguish observed facts, user-provided data, estimates, and unknowns
+- Score delivery value, practical value, rigor, insight, and adoption confidence
+- End with actionable prompt-engineering recommendations
 
-【AI 输入与输出记录】
-{{可提供的对话、Token、模型、调用次数或账单数据；没有就写“未知”}}
+The Chinese version is available in [README_ZH.md](README_ZH.md).
 
-【最终产出与证据】
-{{完成了什么、文件/链接/测试/用户反馈/部署结果}}
+## License
 
-请按以下要求回答：
-1. 先给出结论：值得、基本值得、暂时无法判断或不值得，并用 2–3 句话说明最强证据与最大不确定性。
-2. AI 成本放在第一位。分别列出输入成本、缓存输入成本、输出成本、总成本；缺失数据写“未知”，不要把未知写成 0。
-3. 如果同时有 API 等价成本和订阅分摊估算，请分开呈现，不能相加，也不能称为实际账单。
-4. 区分“已观察事实”“用户提供的数据”“估算值”和“未知信息”。不要编造价格、收益、节省时间或 ROI。
-5. 从交付价值、实际价值、质量与严谨性、新颖洞察、采纳信心五个维度各打 0–5 分，并为每项写一句证据；证据不足时降低信心而不是补猜。
-6. 说明人力成本、返工、阻塞、工具或部署成本，以及最小的下一步验证。
-7. 最后一节必须是“提示词工程建议”，结合本次输入给出 3–5 条可执行改进，覆盖目标、上下文、约束、验收标准、证据和输出格式。必要时给出一版更好的短提示词。
-
-只使用上面提供的资料。不要暴露密码、API Key、个人路径或其他隐私。输出使用与我相同的语言。
-```
-
-## English version
-
-See [`PROMPT_EN.md`](PROMPT_EN.md).
+[MIT](LICENSE)
